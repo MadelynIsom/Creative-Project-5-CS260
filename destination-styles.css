@@ -1,0 +1,185 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.hero {
+    width: 100%;
+    height: 10vh;
+    background-image: url(images/sky-background.jpeg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+}
+
+ul{
+    position: relative;
+    top: 0;
+    left: 0;
+    width:100%;
+    height: 90vh;
+    background: #ccc;
+    margin: 0;
+    padding: 0;
+}
+
+ul li {
+    list-style: none;
+    position: relative;
+    width: 20%;
+    height: 100%;
+    border-right: 1px solid black;
+    float: left;
+    box-sizing: border-box;
+    transition: .5s;
+    text-align: center;
+    overflow: hidden;
+}
+
+ul li:nth-child(1) {
+    background: url(images/tahiti.jpg);
+    background-size: cover;
+    background-position: left;
+}
+
+ul li:nth-child(2) {
+    background: url(images/yosemite.jpg);
+    background-size: cover;
+    background-position: left;
+}
+
+ul li:nth-child(3) {
+    background: url(images/iceland.jpg);
+    background-size: cover;
+    background-position: left;
+}
+
+ul li:nth-child(4) {
+    background: url(images/tokyo.jpg);
+    background-size: cover;
+    background-position: left;
+}
+
+ul li:nth-child(5) {
+    background: url(images/machu-picchu.jpg);
+    background-size: cover;
+    background-position: left;
+}
+
+ul:hover li{
+    width: 10%;
+}
+
+ul li:hover {
+    width: 60%;
+}
+
+ul li .content {
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    background: rgba(0,0,0,.8);
+    box-sizing: border-box;
+    color: #fff;
+    opacity: 0;
+}
+
+ul li:hover .content {
+    bottom: 0;
+    transition: .5s;
+    transition-delay: .5s;
+    opacity: 1;
+}
+
+button {
+    color: black;
+    padding: 10px 25px;
+    background: transparent;
+    border: 1px solid black;
+    border-radius: 20px;
+    outline: none;
+    cursor: pointer;
+}
+
+button:hover {
+    color: #fff;
+    border-color: #fff;
+}
+
+.navbar {
+    width: 95%;
+    height: 15%;
+    margin: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+}
+
+.logo {
+    width: 75px;
+    cursor: pointer;
+}
+
+.side-bar {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 40px;
+    height: 100vh;
+    padding: 0 5px;
+    background-color: #F8F2F2;
+    z-index: 1000;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-toggle-nav {
+    width: 100%;
+    height: 60px;
+    padding-top: 20px;
+    cursor: pointer;
+    visibility: visible;
+}
+
+.btn-toggle-nav:hover {
+    opacity: 60%;
+}
+
+.side-bar ul{
+    padding-top: 50px;
+    overflow: hidden;
+    visibility: hidden;
+}
+
+.side-bar ul li{
+    line-height: 60px;
+    list-style: none;
+}
+
+.side-bar ul li span, .side-bar ul li a{
+    top: 50%;
+    transform: translateY(-50%);
+    display: block;
+    height: 60px;
+    padding: 0 10px;
+    text-decoration: none;;
+    color: black;
+    font-size: 16px;
+    white-space: nowrap;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.side-bar ul li a:hover {
+    background-color: #9CC1D9;
+}
+
+.menu {
+    display: block;
+    width: 25px;
+    margin: 40px auto 0;
+    cursor: pointer;
+}
